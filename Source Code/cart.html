@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shopping Cart</title>
+    <style>
+        /* Add your CSS styles here */
+        #cart {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        
+        /* Add your CSS styles here */
+        #login-container {
+            display: none;
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="login-container">
+       
+        <div id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+        </div>
+    </div>
+
+    <div id="products">
+       
+        <div class="product" data-name="Product 1" data-price="10.00">
+            
+            <p>Price: $10.00</p>
+            <button onclick="addToCart('Product 1', 10.00)">Add to Cart</button>
+        </div>
+        <!-- Add more products as needed -->
+    </div>
+
+    <script>
+        // JavaScript code for the shopping cart functionality
+        function addToCart(productName, price) {
+            // Get or create the cart element
+            var cart = document.getElementById('cart-items');
+
+            // Create a new list item for the cart
+            var cartItem = document.createElement('li');
+            cartItem.textContent = productName + ' - $' + price.toFixed(2);
+
+            // Append the new item to the cart
+            cart.appendChild(cartItem);
+
+            // Update the total price
+            updateTotal(price);
+        }
+
+        function updateTotal(price) {
+            // Get the total element
+            var totalElement = document.getElementById('cart-total');
+
+            // Get the current total value
+            var currentTotal = parseFloat(totalElement.textContent);
+
+            // Update the total with the new price
+            var newTotal = currentTotal + price;
+            totalElement.textContent = newTotal.toFixed(2);
+
+            let shoppingCart = document.querySelector('.shopping-cart');
+
+ // JavaScript code to toggle the visibility of the login container
+ function openLoginPage() {
+            var loginContainer = document.getElementById('login-container');
+            loginContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: rgba(157, 78, 226,1.0);
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(150, 60, 228);
+        }
+        body{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(images/supermarket.jpg);
+            color: white;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+    <script>
+        function showAlert() {
+            alert('Login Successful!');
+        }
+    </script>
+</head>
+<body>
+<h1 style="text-align: center;">Login</h1><br><br><br>
+<form action="backend/login.php" method="post">
+    <label for="username"><b>Username</b></label><br>
+    <input type="text" id="username" name="username" required><br>
+    
+    <label for="pass"><b>Password</b></label><br>
+    <input type="password" id="pass" name="pass" required><br><br>
+    
+    <input type="submit" name="submit" value="Login" onclick="showAlert()">
+</form>
+
+<h3 style="text-align: center;color: white;">Don't have an account? <a style="text-decoration: none;color: rgb(0, 123, 255);" href="register.html">Register</a></h3>
+
+</body>
+</html

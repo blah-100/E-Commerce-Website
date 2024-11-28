@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css"><link rel="stylesheet" href="dropdown.css">
+    <script src="https://kit.fontawesome.com/bc145f7d38.js" crossorigin="anonymous"></script>
+    <style>
+        .div{
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0,5);
+            box-sizing: border-box;
+            border: 1px solid grey;
+            border-radius: 10px;
+            float: left;
+            margin: 10px;
+            padding: 5px;
+        }
+        p{
+            padding-left: 20px;
+        }
+
+        #cart {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+  }
+
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .newsletter-form input[type="email"] {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+  }
+
+  .newsletter-form button {
+    background-color: rgba(157, 78, 226, 1.0);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .newsletter-form button:hover {
+    background-color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+    color: #fff; /* Text color on hover */
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/logo1.jpg" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li ><a href="our-products.html"><div class="dropdown">
+                    <button class="dropbtn">Our Products</button>
+                    <div class="dropdown-content">
+                        <a href="fruitsandVegetables.html">Fruits and Vegetables</a>
+                        <a href="beverages.html">Beverages</a>
+                        <a href="snacks.html">Snacks</a>
+                        <a href="home-appliances.html">Home Appliances</a>
+                        <a href="#">Baby Products</a>
+                        <a href="#">Cosmetics</a>
+                    </div>
+                </div></a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button class="button1">Login & Register</button></a>
+        <ul class="nav__links"> <li style="list-style: none;" class="nav__links"><a href="#" ><i class="fa-solid fa-cart-shopping"></i></a></li></ul>
+     </header>
+
+<main>
+    <hr>
+    <br>
+    <h1 class="h1">Snacks</h1>
+    <br>
+    <hr>
+    <br><br><br>
+    <div class="div" style="margin-left: 70px;"><img src="images/biscuits.jpg" alt="" width="250px" height="250px"><p style="text-align: center;"> <b style="font-size: 150%;">Mcvities Biscuits</b><br><b>4.00 <small>AED</small></b><br><br><button onclick="addToCart()">Add to Cart</button></p></div>
+    <div class="div"><img src="images/wafers.jpg" alt="" width="250px" height="250px"><p style="text-align: center;"> <b style="font-size: 150%;">Loacker Wafers</b><br><b>10.00 <small>AED</small></b><br><br><button onclick="addToCart()">Add to Cart</button></p></div>
+    <div class="div"><img src="images/rolls.jpg" alt="" width="250px" height="250px"><p style="text-align: center;"> <b style="font-size: 150%;">Caprice Wafer Rolls</b><br><b>3.50 <small>AED</small></b><br><br><button onclick="addToCart()">Add to Cart</button></p></div>
+    <div class="div" style="margin-right: 70px;"><img src="images/chocolate.jpg" alt="" width="250px" height="250px"><p style="text-align: center;"> <b style="font-size: 150%;">Lindt Chocolate</b><br><b>1.60 <small>AED</small></b><br><br><button onclick="addToCart()">Add to Cart</button></p></div>
+    <div class="div" style="margin-left: 70px;"><img src="images/doritos.jpg" alt="" width="250px" height="250px"><p style="text-align: center;"> <b style="font-size: 150%;">Doritos</b><br><b>10.80 <small>AED</small></b><br><br><button onclick="addToCart()">Add to Cart</button></p></div>
+    <div class="div"><img src="images/cheetos.jpg" alt="" width="250px" height="250px"><p style="text-align: center;"> <b style="font-size: 150%;">Cheetos</b><br><b>4.00 <small>AED</small></b><br><br><button onclick="addToCart()">Add to Cart</button></p></div>
+    <div class="div"><img src="images/mini-oreo.jpg" alt="" width="250px" height="250px"><p style="text-align: center;"> <b style="font-size: 150%;">Mini Oreos</b><br><b>6.00 <small>AED</small></b><br><br><button onclick="addToCart()">Add to Cart</button></p></div>
+    <div class="div" style="margin-right: 70px;"><img src="images/skittles.jpg" alt="" width="250px" height="250px"><p style="text-align: center;"> <b style="font-size: 150%;">Skittles</b><br><b>5.50 <small>AED</small></b><br><br><button onclick="addToCart()">Add to Cart</button></p></div>
+</main>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<script>
+    function addToCart(){
+        alert("Succesfully added to cart")
+    }
+</script>
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="our-products.html">Our Products</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>123 Main Street, City</p>
+        <p>Email: carefour@gmail.com</p>
+        <p>Phone: +123-456-7890</p>
+      </div>
+      <div class="footer-section">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer> 
+</body>
+</html>

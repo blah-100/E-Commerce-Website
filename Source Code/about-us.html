@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css"><link rel="stylesheet" href="dropdown.css">
+    
+    <script src="https://kit.fontawesome.com/bc145f7d38.js" crossorigin="anonymous"></script>
+    <style>
+            *{
+        box-sizing: border-box;
+    }
+
+    .top2{
+        margin:350px 50px 10px 640px;
+        padding: 0;
+        font-size: tahoma;
+        color: #444;
+       
+    }
+
+    section{
+       /* position: static;*/
+       /* top: 60%;*/
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 400px;
+        width: 1200px;
+        background-color: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        display: flex;
+    
+    }
+
+    .content {
+        width: calc(50% - 50px);
+        height: 100%;
+        background-color: white;
+        padding: 2% 5%;
+        line-height: 1.5em;
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .imagebox{
+        width: calc(50% + 50px);
+        
+      /* background-image: url(images/supermarket.jpg);
+        background-size: cover;
+        background-position: 100% 100%;
+        height: 100%;*/
+        background-color: rgb(31, 223, 223);
+        border-left: 100px solid white;
+        border-bottom: 400px solid transparent;
+    }
+
+    .img {
+        background-image: url(images/supermarket.jpg);
+        background-size: cover;
+  width: 650px;
+  height: 400px;
+  /*-webkit-clip-path: polygon(0 0, 0 100px, 100px 80px, 100px 0);*/
+  
+  clip-path: polygon(10% 0px, 100% 0%, 100% 100%, 0px 100%);
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+  }
+
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .newsletter-form input[type="email"] {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+  }
+
+  .newsletter-form button {
+    background-color: rgba(157, 78, 226, 1.0);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 0px;
+  }
+
+  .newsletter-form button:hover {
+    background-color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+    color: #fff; /* Text color on hover */
+  }
+
+    </style>
+</head>
+<body>
+    
+<header>
+    
+    <img class="logo" src="images/logo1.jpg" alt="logo">
+    <nav>
+        <ul class="nav__links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li ><a href="our-products.html"><div class="dropdown">
+                <button class="dropbtn">Our Products</button>
+                <div class="dropdown-content">
+                    <a href="fruitsandVegetables.html">Fruits and Vegetables</a>
+                    <a href="beverages.html">Beverages</a>
+                    <a href="snacks.html">Snacks</a>
+                    <a href="home-appliances.html">Home Appliances</a>
+                    <a href="#">Baby Products</a>
+                    <a href="#">Cosmetics</a>
+                </div>
+            </div></a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            
+        </ul>
+    </nav>
+    <a class="cta" href="login.html"><button class="button1">Login & Register</button></a>
+ <ul class="nav__links"> <li style="list-style: none;" class="nav__links"><a href="#" ><i class="fa-solid fa-cart-shopping"></i></a></li></ul>
+ </header>
+
+ <div class="top2">
+    <section class="skewbox">
+        <div class="content">
+            <h1>  Welcome to Car-E-Four - Your Ultimate Grocery Destination!</h1>
+  <br>
+  <p>At Car-E-Four, we've reimagined the way you shop for groceries. More than just an online store, we are your go-to destination for quality, convenience, and a delightful shopping experience. As your trusted online grocery partner, Car-E-Four is committed to bringing fresh, diverse, and top-notch products directly to your doorstep.</p>
+        </div>
+        <div class="img"></div>
+    </section>
+</div> 
+
+   
+<main class="about-us">
+  
+  
+
+  <h1>Our Mission</h1>
+  <br>
+  Our mission is simple yet powerful: to make grocery shopping easy, enjoyable, and accessible to all. Car-E-Four is driven by a passion for quality food, a dedication to customer satisfaction, and a commitment to enhancing your daily life through the joy of hassle-free grocery shopping.
+  <br><br>
+
+  <h1>What Sets Us Apart</h1>
+  <br>
+  <b>Freshness Guaranteed:</b> We understand the importance of fresh, high-quality produce. That's why, at Car-E-Four, we source our products carefully to ensure that every item in your cart is as fresh as it can be. From farm-fresh fruits and vegetables to pantry staples, we've got you covered.
+  <br>
+  <b>Diverse Selection:</b> Explore a diverse range of products, including organic options, international delights, and local favorites. Our curated selection is designed to cater to your unique tastes and preferences, providing a one-stop solution for all your grocery needs.
+  <br>
+  <b>Convenience Redefined:</b> Say goodbye to long lines and heavy bags. With Car-E-Four, your groceries are just a few clicks away. Our user-friendly website and mobile app make it easy to browse, order, and have your groceries delivered to your doorstep at a time that suits you.
+  <br>
+  <b>Customer-Centric Service:</b> Your satisfaction is at the heart of everything we do. Our dedicated customer support team is ready to assist you with any queries or concerns. We value your trust and work tirelessly to ensure your Car-E-Four experience is nothing short of exceptional.
+  <br><br>
+  <h1>Our Commitment</h1>
+  <br>
+  Car-E-Four is not just a grocery store; it's a commitment to making your life simpler and more enjoyable. We strive to be more than a service provider – we aim to be your reliable partner in the journey of keeping your kitchen well-stocked and your family nourished.
+  <br>
+  Thank you for choosing Car-E-Four for your grocery needs. Join us in creating a future where grocery shopping is a pleasure, and every meal is a celebration!
+  <br><br>
+  <i><b>Car-E-Four - Bringing Quality Groceries to Your Doorstep.</b></i>
+
+</main> 
+<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="our-products.html">Our Products</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>123 Main Street, City</p>
+        <p>Email: carefour@gmail.com</p>
+        <p>Phone: +123-456-7890</p>
+      </div>
+      <div class="footer-section">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>

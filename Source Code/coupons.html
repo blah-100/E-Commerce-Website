@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coupons and Offers</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  #coupons-offers {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .coupon-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .coupon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(70%);
+    z-index: -1;
+  }
+
+  .coupon-card h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #fff;
+  }
+
+  .coupon-card p {
+    margin: 0;
+    color: #fff;
+    font-size: 1em;
+  }
+
+  .coupon-card button {
+    background-color: rgba(157, 78, 226, 1.0);;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .coupon-card button:hover {
+    background-color: rgba(157, 78, 226, 0.8);;
+    color: #fff;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+  }
+
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .newsletter-form input[type="email"] {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+  }
+
+  .newsletter-form button {
+    background-color: rgba(157, 78, 226, 1.0);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .newsletter-form button:hover {
+    background-color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+    color: #fff; /* Text color on hover */
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 >Coupons and Offers</h1>
+</header>
+
+<section id="coupons-offers">
+  <div class="coupon-card" style="background-image: url('images/vegetables.jpeg');background-size: cover;background-position: center;color: rgba(255, 255, 255, 1);text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;">
+    <h3>50% Off Fresh Vegetables</h3>
+    <p>Use code: VEG50</p>
+    <p>Valid until: April 30, 2024</p>
+    <button>Claim Offer</button>
+  </div>
+  <div class="coupon-card" style="background-image: url('images/free-delivery.png');background-size: cover;background-position: center;color: rgba(255, 255, 255, 1);text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;">
+    <h3>Free Delivery on Orders Over $50</h3>
+    <p>Use code: FREEDEL</p>
+    <p>Valid until: May 15, 2024</p>
+    <button>Claim Offer</button>
+  </div>
+  <div class="coupon-card" style="background-image: url('images/first-order.jpeg');background-size: cover;background-position: center;color: rgba(255, 255, 255, 1);text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;">
+    <h3>$5 Off Your First Order</h3>
+    <p>Use code: WELCOME5</p>
+    <p>Valid until: June 30, 2024</p>
+    <button>Claim Offer</button>
+  </div>
+  <div class="coupon-card" style="background-image: url(images/dairy.jpg);background-size: cover;background-position: center;color: rgba(255, 255, 255, 1);text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;">
+    <h3>20% Off Dairy Products</h3>
+    <p>Use code: DAIRY20</p>
+    <p>Valid until: May 31, 2024</p>
+    <button>Claim Offer</button>
+  </div>
+  <div class="coupon-card" style="background-image: url('images/sale.avif');background-size: cover;background-position: center;color: rgba(255, 255, 255, 1);text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;">
+    <h3>Special Weekend Sale</h3>
+    <p>Use code: WEEKEND</p>
+    <p>Valid until: April 25, 2024</p>
+    <button>Claim Offer</button>
+  </div>
+  <div class="coupon-card" style="background-image: url('images/BOGO.png');background-size: cover;background-position: center;color: rgba(255, 255, 255, 1);text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;">
+    <h3>Buy One, Get One Free</h3>
+    <p>Use code: BOGO</p>
+    <p>Valid until: May 10, 2024</p>
+    <button>Claim Offer</button>
+  </div>
+  
+</section>
+<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="our-products.html">Our Products</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>123 Main Street, City</p>
+        <p>Email: carefour@gmail.com</p>
+        <p>Phone: +123-456-7890</p>
+      </div>
+      <div class="footer-section">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

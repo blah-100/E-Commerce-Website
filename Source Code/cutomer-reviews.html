@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Reviews</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  #customer-reviews {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .review-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .review-card p {
+    margin: 0;
+    color: #666;
+    font-size: 1em;
+  }
+
+  .review-card .customer-info {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .review-card .customer-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .review-card .customer-info h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+  }
+
+  .review-card .customer-info .rating {
+    margin-left: auto;
+    color: #ffc107;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Customer Reviews</h1>
+</header>
+
+<section id="customer-reviews">
+  <div class="review-card">
+    <p>"The produce quality is excellent, and the prices are unbeatable. Highly recommended!"</p>
+    <div class="customer-info">
+      <img src="images/person1jpeg.jpeg" alt="Customer 1">
+      <div>
+        <h4>John Doe</h4>
+        <div class="rating">★★★★★</div>
+      </div>
+    </div>
+  </div>
+  <div class="review-card">
+    <p>"Fast delivery and friendly service. Will definitely shop here again!"</p>
+    <div class="customer-info">
+      <img src="images/person2.jpg" alt="Customer 2">
+      <div>
+        <h4>Jane Smith</h4>
+        <div class="rating">★★★★☆</div>
+      </div>
+    </div>
+  </div>
+  <div class="review-card">
+    <p>"I love the variety of products available and the convenience of ordering online. Great job!"</p>
+    <div class="customer-info">
+      <img src="images/person3.avif" alt="Customer 3">
+      <div>
+        <h4>Emily Johnson</h4>
+        <div class="rating">★★★★★</div>
+      </div>
+    </div>
+  </div>
+  <!-- Add more review cards as needed -->
+</section>
+
+</body>
+</html>

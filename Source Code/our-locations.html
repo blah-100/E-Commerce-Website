@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car-e-Four - Our Locations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    #locations-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .location-card {
+      border-radius: 10px;
+      margin: 20px;
+      padding: 20px;
+      width: 320px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.6;
+    }
+
+    .location-card::before {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+}
+
+
+    .location-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .location-card h2 {
+      margin-top: 0;
+      font-size: 1.8em;
+      color: rgba(255, 255, 255, 1);
+      text-shadow: 
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000; /* Adjust the shadow offsets and colors as needed */
+  }
+    
+
+    .location-card p {
+      margin: 0;
+      color: rgba(255, 255, 255, 1);
+      margin-top: 10px;
+      font-size: 1.1em;
+      text-shadow: 
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000; /* Adjust the shadow offsets and colors as needed */
+  }
+      
+
+    .location-card .info {
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    .location-card .info p {
+      margin-top: 10px;
+    }
+
+    .locations-info {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+    }
+
+    .locations-info h2 {
+      font-size: 2em;
+    }
+
+    .locations-info p {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+
+    .locations-info ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .locations-info ul li {
+      margin-bottom: 10px;
+    }
+    footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+  }
+
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .newsletter-form input[type="email"] {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+  }
+
+  .newsletter-form button {
+    background-color: rgba(157, 78, 226, 1.0);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .newsletter-form button:hover {
+    background-color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+    color: #fff; /* Text color on hover */
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Car-e-Four - Our Locations</h1>
+  </header>
+  
+  <section id="locations-section">
+    <!-- Locations will be populated here dynamically using JavaScript -->
+  </section>
+
+  <div class="locations-info">
+    <h2>About Car-e-Four Stores</h2>
+    <p>Car-e-Four is a leading grocery store chain committed to providing quality products and exceptional service to its customers. Here are some key features of our stores:</p>
+    <ul>
+      <li>Wide range of fresh produce, groceries, and household items</li>
+      <li>Convenient locations with ample parking space</li>
+      <li>Friendly and knowledgeable staff to assist you with your shopping needs</li>
+      <li>Regular promotions and discounts to help you save on your purchases</li>
+      <li>Online ordering and delivery services available for added convenience</li>
+    </ul>
+  </div>
+
+  <script>
+    const locations = [
+      { 
+        name: "Car-e-Four Downtown", 
+        address: "123 Main Street, City", 
+        hours: "Mon-Sat: 9am-9pm, Sun: 10am-7pm",
+        phone: "+1 (123) 456-7890",
+        email: "downtown@example.com",
+        backgroundImage: "url('images/01_header_c-store-exterior.jpg')" // Background image for downtown location
+      },
+      { 
+        name: "Car-e-Four Eastside", 
+        address: "456 East Street, City", 
+        hours: "Mon-Sat: 10am-8pm, Sun: Closed",
+        phone: "+1 (234) 567-8901",
+        email: "eastside@example.com",
+        backgroundImage: "url('images/istockphoto-622522878-612x612.jpg')" // Background image for eastside location
+      },
+      { 
+        name: "Car-e-Four Westside", 
+        address: "789 West Street, City", 
+        hours: "Mon-Fri: 8am-10pm, Sat-Sun: 9am-8pm",
+        phone: "+1 (345) 678-9012",
+        email: "westside@example.com",
+        backgroundImage: "url('images/Grocery-shops-in-London-List-of-supermarkets5.jpeg')" // Background image for westside location
+      }
+      // Add more locations as needed
+    ];
+
+    function populateLocations() {
+      const locationsSection = document.getElementById("locations-section");
+      
+      locations.forEach(location => {
+        const card = document.createElement("div");
+        card.classList.add("location-card");
+        card.style.backgroundImage = location.backgroundImage; // Set background image
+        
+        const name = document.createElement("h2");
+        name.textContent = location.name;
+        
+        const address = document.createElement("p");
+        address.textContent = `Address: ${location.address}`;
+        
+        const hours = document.createElement("p");
+        hours.textContent = `Hours: ${location.hours}`;
+        
+        const info = document.createElement("div");
+        info.classList.add("info");
+        
+        const phone = document.createElement("p");
+        phone.textContent = `Phone: ${location.phone}`;
+        
+        const email = document.createElement("p");
+        email.textContent = `Email: ${location.email}`;
+        
+        card.appendChild(name);
+        card.appendChild(address);
+        card.appendChild(hours);
+        info.appendChild(phone);
+        info.appendChild(email);
+        card.appendChild(info);
+        
+        locationsSection.appendChild(card);
+      });
+    }
+
+    window.addEventListener("load", populateLocations);
+  </script>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="our-products.html">Our Products</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>123 Main Street, City</p>
+        <p>Email: carefour@gmail.com</p>
+        <p>Phone: +123-456-7890</p>
+      </div>
+      <div class="footer-section">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

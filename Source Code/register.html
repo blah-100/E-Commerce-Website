@@ -1,0 +1,209 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Register</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 300px;
+      margin: 20px auto;
+      color: white;
+      text-align: center;
+      text-shadow: 10px 10px 30px ;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 20px;
+    }
+
+    button {
+      background-color:  rgba(157, 78, 226,1.0);
+      color: white;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body style="background-image: url(images/supermarket.jpg);background-size: cover;" >
+<div >
+  <form  action="backend/login&register.php" id="loginForm" >
+    <h2>Login</h2>
+    <label for="loginUsername">Username:</label>
+    <input type="text" id="loginUsername" name="loginUsername" required>
+
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" name="loginPassword" required>
+
+    <button type="button" onclick="login()">Login</button>
+  </form>
+
+  <form  action="backend/login&register.php" id="registerForm">
+    <h2>Register</h2>
+    <label for="registerUsername">Username:</label>
+    <input type="text" id="registerUsername" name="registerUsername" required>
+
+    <label for="registerPassword">Password:</label>
+    <input type="password" id="registerPassword" name="registerPassword" required>
+
+    <button type="button" onclick="register()">Register</button>
+  </form>
+</div>
+  <script>
+    function login() {
+      // Implement login logic here (e.g., send data to server)
+      alert('Login succesful');
+    }
+
+    function register() {
+      // Implement registration logic here (e.g., send data to server)
+      alert('Registeration succesful');
+    }
+  </script>
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select [name="loc"]{
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            box-sizing: border-box;
+            
+        }
+        input[type="submit"] {
+            background-color: rgba(157, 78, 226,1.0);
+            color: white;
+            padding: 10px 15px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(150, 60, 228);
+        }
+
+        body{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)), url(images/supermarket.jpg);
+            color: white;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+    <script>
+      function showAlert() {
+          alert('Registered Successfully! Now you can login to your account.');
+      }
+  </script>
+</head>
+<body>
+    <!--<h2>Login</h2>
+    <form action="backend/login&register.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+
+    <h2>Register</h2>
+    <form action="backend/login&register.php" method="post">
+        <label for="reg_username">Username:</label>
+        <input type="text" id="reg_username" name="reg_username" required>
+        <label for="reg_password">Password:</label>
+        <input type="password" id="reg_password" name="reg_password" required>
+        <input type="submit" value="Register">
+    </form>-->
+
+
+    <h1 style="text-align: center;">Register</h1><br><br><br>
+ 
+
+ <!--<div class="container" style="border:black; border-width:5px; border-style:solid;"</div>--> <div>
+	  <form align="center" id="frm1" action="backend/register.php" method="post"  > 
+	  
+	 
+	  <label for="emailcheck"><b>Name</b></label><br>
+	<input type="text" id="fname" placeholder="first" name="fname" required>
+	  <input type="text" id="lname" placeholder="Last" name="lname" required ><br>
+	  
+	  <BR>
+	  <label for="username"><b>Choose your username </b></label><br>
+	  <input type="text" id="username" name="username"  required><br>
+	  <BR>
+	  <label for="pass"><b>Create a password</b></label><br>
+	  <input type="text" id="pass" name="pass" required> <br>
+	  <BR>
+	  <label for="pass"><b>Confirm your password </b></label><br>
+	  <input type="text" id="pass" name="cpass" required> <br>
+	  <BR>
+	  <label for="dob"><b>Date of birth <br></b></label>
+	  <input type="text" id="dob" name="month" placeholder="Month" required>
+	  <input type="text" id="dob" name="day" placeholder="Day" required>
+	  <input type="text" id="dob" name="year" placeholder="year" required>
+	  <br>
+	  <BR>
+	  
+	 <label for="mob"><b>Mobile Phone <br></b></label>
+	  <input type="text" id="mob" name="mob" placeholder="Mobile number" required>
+	
+	  <br>
+	  <BR>
+ <label for="email"><b> Current Email Address <br></b></label>
+	  <input type="email" id="email" name="email" placeholder="@gmail.com" required>
+	  <br>
+	  <BR>
+	 <label for="email"><b> Location <br></b></label>
+	  <select name="loc">
+	  <option value="India" name="loc"> India <br>
+	  <option value="Oman" name="loc" > Oman <br>
+	  <option value="Qatar" name="loc"> Qatar <br>
+	  <option value="UAE" name="loc" > UAE <br>
+	  </select>
+	  <br>
+	  
+	  <br>
+	<input type="submit" name="save" style="font-size:20px" value="Submit" onclick="showAlert()">
+	  </div>
+	  </form>
+</html>

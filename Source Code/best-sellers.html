@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramadan Deals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    #deals-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .deal-card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .deal-card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+  }
+
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .newsletter-form input[type="email"] {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+  }
+
+  .newsletter-form button {
+    background-color: rgba(157, 78, 226, 1.0);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .newsletter-form button:hover {
+    background-color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+    color: #fff; /* Text color on hover */
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Best Sellers</h1>
+  </header>
+  
+  <section id="deals-section">
+    <!-- Deals will be populated here dynamically using JavaScript -->
+  </section>
+
+  <script>
+    const deals = [
+    { name: "Biscuits", price: 10, image: "images/biscuits.jpg" },
+      { name: "Dates", price: 5, image: "images/dates.webp" },
+      { name: "Flour", price: 4, image: "images/flour.jpg" },
+      { name: "Cheetos", price: 10, image: "images/cheetos.jpg" },
+      { name: "Cooking Oil", price: 5, image: "images/oil.jpeg" },
+      { name: "Orange Juice", price: 3, image: "images/orange-juice.jpg" },
+      { name: "Kiwi", price: 2, image: "images/kiwi.avif" },
+      { name: "Almonds", price: 6, image: "images/almonds.jpeg" },
+      { name: "Mint Tea", price: 7, image: "images/mint-tea.avif" },
+      { name: "Mango", price: 8, image: "images/mango.jpg" },
+      { name: "Apples", price: 2, image: "images/apple.jpg" },
+      { name: "Banana", price: 5, image: "images/banana.jpeg" },
+      { name: "Chocolate Milk", price: 6, image: "images/chocolate-milk.jpeg" },
+      { name: "Mini Oreos", price: 3, image: "images/mini-oreo.jpg" },
+      { name: "Iced Tea", price: 7, image: "images/ice-tea.webp" },
+      { name: "Pomegranate", price: 9, image: "images/Pomegranate.jpg" },
+      { name: "Pineapple", price:1, image: "images/pineapple.avif" },
+      
+    ];
+
+    function populateDeals() {
+      const dealsSection = document.getElementById("deals-section");
+      
+      deals.forEach(deal => {
+        const card = document.createElement("div");
+        card.classList.add("deal-card");
+        
+        const image = document.createElement("img");
+        image.src = deal.image;
+        image.alt = deal.name;
+        
+        const name = document.createElement("h2");
+        name.textContent = deal.name;
+        
+        const price = document.createElement("p");
+        price.textContent = `$${deal.price}`;
+        
+        const addToCartButton = document.createElement("button");
+        addToCartButton.textContent = "Add to Cart";
+        addToCartButton.addEventListener("click", () => {
+          alert(`Added ${deal.name} to cart!`);
+        });
+        
+        card.appendChild(image);
+        card.appendChild(name);
+        card.appendChild(price);
+        card.appendChild(addToCartButton);
+        
+        dealsSection.appendChild(card);
+      });
+    }
+
+    window.addEventListener("load", populateDeals);
+  </script>
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="our-products.html">Our Products</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>123 Main Street, City</p>
+        <p>Email: carefour@gmail.com</p>
+        <p>Phone: +123-456-7890</p>
+      </div>
+      <div class="footer-section">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer> 
+</body>
+</html>
+

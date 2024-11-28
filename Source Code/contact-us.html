@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css"><link rel="stylesheet" href="dropdown.css">
+    
+    <script src="https://kit.fontawesome.com/bc145f7d38.js" crossorigin="anonymous"></script>
+    <style>
+        .blah{
+            margin-top: 200px;
+            margin-left: 50px;
+        }
+
+        .h1{
+            font-size: 350%;
+        }
+
+      /*  form input{
+            border: 1px solid grey;
+            padding: 5px;
+            width: 500px;
+            height: 40px;
+            background: url(images/baby-products.jpg) no-repeat;
+            background-size: 100px 100px;
+            padding-left:30px;
+        }
+
+        .bg-img{
+            background: url(images/baby-products.jpg) no-repeat;
+            background-size: 100px 100px;
+            padding-left:30px;
+            align-items: right;
+        }*/
+
+        .input{
+           float: left;
+           width: 550px;
+           height: 54px;
+           border: 1px solid grey;
+           border-collapse: collapse;
+           border-radius: 0px; 
+           
+        }
+
+        
+
+        .icon1{
+            border: 1px solid grey;
+            padding: 17px 17px 17.5px 17.5px;
+            width: 50px;
+            
+        }
+
+        .divlast{
+            box-sizing: border-box;
+            border: 1px solid rgb(217, 227, 236);
+            border-radius: 10px;
+            text-align: center;
+            background-color: rgb(217, 227, 236);
+            width: 90%;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .contact{
+            position: relative;
+            min-width: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .contact .content{
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .contact .content h2{
+            font-size: 30px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .contact .content p{
+            
+            font-weight: 300;
+            color: #fff;
+        }
+
+
+        .contactForm{
+            width: 40%;
+            padding: 40px;
+            background: #fff;
+        }
+
+        .contactForm h2{
+            font-size: 30px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .contactForm .inputBox{
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .contactForm .inputBox input,
+        .contactForm .inputBox textarea
+        {
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+
+        .contactForm .inputBox span{
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5%;
+            color: #666;
+        }
+
+        .contactForm .inputBox input:focus ~ span,
+        .contactForm .inputBox input:valid ~ span,
+        .contactForm .inputBox textarea:focus ~ span,
+        .contactForm .inputBox textarea:valid ~ span
+        {
+            color: #e91e63;
+            font-size: 12px;
+            transform: translateY(-20px);
+        }
+
+        .contactForm .inputBox input[type="submit"]
+        {
+            width: 100px;
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+        }
+        
+      i.blah{
+       font-size: 200%;
+       margin:0 15px;
+       color: black;
+      } 
+
+      .blah2 a:link {
+        text-decoration: none;
+        color: red;
+      }
+
+      .blah2 a:visited {
+        text-decoration: none;
+        color: red;
+      }
+
+      .blah2 a:hover {
+        text-decoration: none;
+        color: red;
+      }
+
+      .blah2 a:active {
+        text-decoration: none;
+        color: red;
+      }
+      footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-section a:hover {
+    color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+  }
+
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .newsletter-form input[type="email"] {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+  }
+
+  .newsletter-form button {
+    background-color: rgba(157, 78, 226, 1.0);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .newsletter-form button:hover {
+    background-color: rgba(157, 78, 226, 1.0); /* Purple color on hover */
+    color: #fff; /* Text color on hover */
+  }
+
+    </style>
+</head>
+<body >
+    <header>
+    <img class="logo" src="images/logo1.jpg" alt="logo">
+    <nav>
+        <ul class="nav__links">
+            <li><a href="home.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li ><a href="our-products.html"><div class="dropdown">
+                    <button class="dropbtn">Our Products</button>
+                    <div class="dropdown-content">
+                        <a href="fruitsandVegetables.html">Fruits and Vegetables</a>
+                        <a href="beverages.html">Beverages</a>
+                        <a href="snacks.html">Snacks</a>
+                        <a href="home-appliances.html">Home Appliances</a>
+                        <a href="#">Baby Products</a>
+                        <a href="#">Cosmetics</a>
+                    </div>
+                </div></a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            
+        </ul>
+    </nav>
+    <a class="cta" href="login.html"><button class="button1">Login & Register</button></a>
+    <ul class="nav__links"> <li style="list-style: none;" class="nav__links"><a href="#" ><i class="fa-solid fa-cart-shopping"></i></a></li></ul>
+ </header>
+
+ <main class="blah" style="background: url(images/customer-servvice.avif) no-repeat ; background-position: right;">
+    <br><h1 class="h1" style="text-align: left;">Customer Service</h1><br>
+    <p>Search for what you need help with.</p><br><br>
+    <h3>Which product are you looking for?</h3><br>
+    <div >
+      <input type="text" class="input" style="box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);text-align: center;"><button onclick="search()" style="border: 0.5px solid grey;background-color: rgba(157, 78, 226,.8);"><div style="box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);" class="icon1"><i class="fa-solid fa-magnifying-glass"></i></div></button>
+    </div><br><br><br><br><br><br>
+ </main>
+<br><br><br><br>
+
+ <div class="divlast">
+        <h2 style="float: left;font-size: 200%;padding: 13px;">For Questions <i class="fa-solid fa-question"></i></h2>
+        
+    
+    <p style="font-size: 120%;"> Our Customer Care Center</p>
+    <br>
+    <h2 ><b>800-92929 <i class="fa-solid fa-headset"></i></b></h2><div></div>
+ </div>
+<br><br><br>
+
+<div><h2 style="font-size: 200%;margin-left:90px ;float: left;">Follow Us On:</h2></div>
+<div class="divlast blah" style="width: 500px;">
+  <!--  <a href="https://www.facebook.com" class="blah2"><i class="fa-brands fa-facebook blah"></i></a> 
+ <a href="https://www.facebook.com"><div><i class="fa-brands fa-twitter blah"></i></div></a>
+    <i class="fa-brands fa-instagram blah"></i> 
+    <i class="fa-brands fa-youtube blah"></i> -->
+
+  <a href="https://www.facebook.com/carrefour"><i style="color: #1877f2;" class="fa-brands fa-facebook blah"></i></a>
+  <a href="https://www.twitter.com/carrefour"><i style="color: #1da1f2;" class="fa-brands fa-twitter blah"></i></a>
+  <a href="https://www.instagram.com/carrefour"><i style="background-image: url(images/instagram-background-gradient-colors_23-2147821883.avif) ;background-size: cover;border: 0.0px solid white;border-radius: 16px;color: white;"  class="fa-brands fa-instagram blah"></i></a>
+  <a href="https://www.youtube.com/carrefour"><i style="color:#cd201f ;" class="fa-brands fa-youtube blah"></i></a>
+
+
+</div>
+<br><br><br>
+
+
+<h1 style="text-align: center;">Help us improve by giving your Feedback!</h1>
+<section class="contact">
+    <div class="content" >
+    <div class="contactForm" style="width: 450px;border: 1px solid grey;">
+        <form action="">
+            <h2 style="color: black;">Send Message</h2>
+            <div class="inputBox">
+                <input type="text" name="" required="required">
+                <span>Full Name</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="" required="required">
+                <span>Email</span>
+            </div>
+            <div class="inputBox">
+                <textarea name="" id="" cols="30" rows="10" required="required" style="height: 100px;"></textarea>
+                <span>Your Message</span>
+            </div>
+            <div class="inputBox">
+                <button onclick="send()" style="border: none;background-color: #ffffff;"><input type="submit" name="" value="send"></button>
+            </div>
+        </form>
+
+    <script>
+        function search(){
+            alert("Item Found in our Store!");
+        }
+
+        function send(){
+            alert("Thanks for your Feedback!")
+        }
+    </script>
+</div>
+</div>
+</section>
+<br>
+<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="our-products.html">Our Products</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p>123 Main Street, City</p>
+        <p>Email: carefour@gmail.com</p>
+        <p>Phone: +123-456-7890</p>
+      </div>
+      <div class="footer-section">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
